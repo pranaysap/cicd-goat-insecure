@@ -11,6 +11,7 @@ LABEL org.opencontainers.image.vendor="Cider Security" \
     org.opencontainers.image.version=$VERSION \
     org.opencontainers.image.revision=$COMMIT_SHA
 
+
 RUN apk add --no-cache gitlab-runner curl bash
 COPY . /setup/
 ENTRYPOINT ["/setup/run.sh"]
